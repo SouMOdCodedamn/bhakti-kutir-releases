@@ -1,0 +1,51 @@
+# Daily darshan for the Bhakti Kutir app.
+#
+# Every half hour in the morning, then every hour until midnight (India
+# time), this reads Hare Krishna Mandir Ahmedabad's website gallery, finds the
+# latest dated "Darshan" albums and writes the links of their photos to
+# darshan/today.json, which the app reads. A new commit only when something
+# changed. If the website cannot be read, the run fails (GitHub emails the
+# owner) and the last good file stays as it is.
+name: Daily darshan feed
+
+on:
+  schedule:
+    # 05:37-13:07 IST, every half hour (GitHub cron is in UTC).
+    - cron: '7,37 0-7 * * *'
+    # 13:53-23:53 IST, every hour.
+    - cron: '23 8-18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-darshan
+  cancel-in-progress: false
+
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test the page reader
+        working-directory: scripts
+        run: python3 -m unittest -v test_darshan_feed
+
+      - name: Read the temple gallery
+        run: python3 scripts/darshan_feed.py darshan/today.json
+
+      - name: Save if there is something new
+        run: |
+          if git diff --quiet -- darshan/today.json && git ls-files --error-unmatch darshan/today.json >/dev/null 2>&1; then
+            echo "Nothing new."
+            exit 0
+          fi
+          latest=$(python3 -c 'import json; a = json.load(open("darshan/today.json"))["albums"][0]; print(a["date"], len(a["photos"]), "photos")')
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add darshan/today.json
+          git commit -m "Daily darshan: $latest"
+          git push
