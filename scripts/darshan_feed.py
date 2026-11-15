@@ -32,6 +32,7 @@ from __future__ import annotations
 import datetime as dt
 import html
 import json
+import os
 import re
 import sys
 import time
@@ -200,6 +201,7 @@ def main(argv: list[str]) -> int:
         if same and old.get("updatedAt")
         else dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     )
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(feed, f, ensure_ascii=False, indent=1)
         f.write("\n")
