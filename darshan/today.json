@@ -4,6 +4,21 @@
  "credit": "Hare Krishna Mandir, Ahmedabad",
  "albums": [
   {
+   "date": "2026-11-27",
+   "title": "2026-11-27 Darshan",
+   "url": "https://harekrishnamandir.org/gallery/2026-11-27-darshan",
+   "photos": [
+    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/f2ebee7a-61fd-4e65-a63c-4d449b3f5dc7.jpg",
+    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/3fc2008f-9a6d-45cc-ab7b-b4d9497afb9d.jpg",
+    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/d7d5c331-c38b-45e5-a024-cc6d65514ba2.jpg",
+    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/b9be8db0-7d3d-43dc-b4b9-e3ae97094be8.jpg",
+    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/013cb29b-063a-4619-b90e-c038bf8825ce.jpg",
+    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/3c970f8b-d0cc-4629-87ab-65b23a04add4.jpg",
+    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/bf418b40-5d06-4f61-92e5-59124849c057.jpg",
+    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/cb9887f8-60df-4c2f-b683-b335e371fe5d.jpg"
+   ]
+  },
+  {
    "date": "2026-11-26",
    "title": "2026-11-26 Darshan",
    "url": "https://harekrishnamandir.org/gallery/2026-11-26-darshan",
@@ -108,24 +123,7 @@
     "https://api.harekrishnamandir.org/uploads/gallery/2026/11/23024f22-a73e-4744-9c2c-f7cfe05318c2.jpg",
     "https://api.harekrishnamandir.org/uploads/gallery/2026/11/e875f321-719b-4078-ad40-68a0e2dfc909.jpg"
    ]
-  },
-  {
-   "date": "2026-11-20",
-   "title": "2026-11-20 Darshan",
-   "url": "https://harekrishnamandir.org/gallery/2026-11-20-darshan",
-   "photos": [
-    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/a2080c27-99ed-4dad-8c86-e3a5f58ec0fb.jpg",
-    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/1fa060ef-6a8a-4d65-b8f6-98ba017307e5.jpg",
-    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/de25966b-c2e3-4f9d-884e-49d0c4931084.jpg",
-    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/710a46b2-cdf9-4161-b5fd-0d3bea0de8ce.jpg",
-    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/b7669a3d-e319-4ed5-b171-3b15c329b727.jpg",
-    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/c169ba48-7d4d-4246-8fb0-c465a0eef65e.jpg",
-    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/18160f58-6d42-47d1-a289-5b4d6583d456.jpg",
-    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/fd943a28-3296-4b29-9e02-eaee79afdbe7.jpg",
-    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/e6f01725-1280-4491-8804-f2766bf2882e.jpg",
-    "https://api.harekrishnamandir.org/uploads/gallery/2026/11/90133dd5-c4f6-48da-9eee-b54537e5d8eb.jpg"
-   ]
   }
  ],
- "updatedAt": "2026-11-26T08:03:59Z"
+ "updatedAt": "2026-11-27T08:11:07Z"
 }
